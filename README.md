@@ -19,9 +19,21 @@ PPH_API_KEY="your-api-key"
 Then, you can use the package like this:
 
 ```php
-$client = app(ApiClient::class);
-$response = $client->get('/public/products/simple');
-foreach($response->array('data') as $product) {
-    echo $product['name'] . PHP_EOL;
-}
+    public function testGetHostings()
+    {
+        // Automatically injects the API key from the .env file
+        $client = app(ApiClient::class);
+        
+        // Get all hostings, with the alternative server 'fsn-01'
+        $response = $client
+            ->withAlt('fsn-01')
+            ->get('/client/hostings');
+        
+        // Get the first hosting ID
+        $firstHosting = $response->get('data.0.id');
+
+        // Get the complete hosting information
+        $completeHosting = $client->get("/client/hostings/{$firstHosting}");
+        dd($completeHosting->all());
+    }
 ```
