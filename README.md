@@ -5,7 +5,7 @@ This package provides a simple way to communicate with the Prepaid Hoster API. I
 ## Installation
 
 ```bash
-composer require dezio/pph-api
+composer require prepaid-hoster/laravel-pph-api-client
 ```
 
 ## Usage
