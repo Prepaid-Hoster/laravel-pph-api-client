@@ -1,5 +1,5 @@
 {
-    "name": "dezio/pph-api",
+    "name": "prepaid-hoster/laravel-pph-api-client",
     "autoload": {
         "psr-4": {
             "DeZio\\PrepaidHoster\\API\\": "src/"
