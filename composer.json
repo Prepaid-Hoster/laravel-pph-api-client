@@ -1,0 +1,22 @@
+{
+    "name": "dezio/pph-api",
+    "autoload": {
+        "psr-4": {
+            "DeZio\\PrepaidHoster\\API\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Dennis Ziolkowski",
+            "email": "ziolkowski@prepaid-hoster.de"
+        }
+    ],
+    "require": {},
+    "extra": {
+        "laravel": {
+            "providers": [
+                "\\DeZio\\PrepaidHoster\\API\\PrepaidHosterApiProvider"
+            ]
+        }
+    }
+}
